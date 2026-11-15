@@ -34,9 +34,14 @@ fun WelcomeScreen(onContinue: () -> Unit, onEnable: () -> Unit, screeningEnabled
                 Text("CALLCATCHER", color = TextMain, fontWeight = FontWeight.Bold, letterSpacing = 2.sp)
             }
             Spacer(Modifier.height(26.dp))
-            Text(if (step == 0) "Calls, on
-your terms." else "Protection
-with permission.", color = TextMain, fontSize = 38.sp, lineHeight = 42.sp, fontWeight = FontWeight.Bold)
+            Text(
+    if (step == 0) "Calls, on\nyour terms."
+    else "Protection\nwith permission.",
+    color = TextMain,
+    fontSize = 38.sp,
+    lineHeight = 42.sp,
+    fontWeight = FontWeight.Bold
+)
             Text(
                 if (step == 0) "A calmer way to handle unknown callers. Keep control of every decision."
                 else "CallCatcher can screen ordinary mobile calls when you choose it as your call-screening app. You can change this any time in Android settings.",
@@ -80,8 +85,13 @@ fun HomeScreen(modifier: Modifier, enabled: Boolean, onEnable: () -> Unit, onBlo
     Column(modifier.fillMaxSize().padding(20.dp)) {
         Text("CALLCATCHER", color = Neon, letterSpacing = 2.sp, fontSize = 12.sp, fontWeight = FontWeight.Bold)
         Spacer(Modifier.height(8.dp))
-        Text("Your calls.
-Your control.", color = TextMain, fontSize = 32.sp, lineHeight = 36.sp, fontWeight = FontWeight.Bold)
+        Text(
+    "Your calls.\nYour control.",
+    color = TextMain,
+    fontSize = 32.sp,
+    lineHeight = 36.sp,
+    fontWeight = FontWeight.Bold
+)
         Spacer(Modifier.height(22.dp))
         Card(colors = CardDefaults.cardColors(containerColor = Panel), shape = RoundedCornerShape(24.dp)) {
             Column(Modifier.fillMaxWidth().padding(20.dp), verticalArrangement = Arrangement.spacedBy(14.dp)) {

@@ -1,0 +1,29 @@
+
+name: OpenWA CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  project-check:
+    name: OpenWA project check
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout source
+        uses: actions/checkout@v4
+
+      - name: Verify project structure
+        run: |
+          test -f README.md
+          test -d backend
+          test -d android
+          test -d docs
+          echo "OpenWA project structure verified!"

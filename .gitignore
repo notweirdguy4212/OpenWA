@@ -4,3 +4,5 @@ local.properties
 **/build/
 *.iml
 .DS_Store
+*.jks
+*-base64.txt
